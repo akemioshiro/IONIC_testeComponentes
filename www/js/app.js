@@ -22,3 +22,17 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+.controller("btnController", function($scope){
+  $scope.alteraNomeBtn = function(nome){
+    $scope.nomeBtn1 = nome;
+  };
+
+  $scope.alteraNomeBtn2 = function(nome)
+  {
+    $scope.nomeBtn2 = nome;
+  };
+
+  $scope.desabilitar= false;
+
+})
