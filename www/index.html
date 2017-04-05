@@ -42,7 +42,7 @@
 
 
       <!-- corpo da aplicação -->
-      <ion-content class="has-header has-footer">
+      <ion-content class="has-header has-footer" ng-Controller="appController">
 
       <!-- botões -->
         <button class="button button-royal" ng-click="alteraNomeBtn('Botão Básico')">
@@ -95,7 +95,40 @@
             </ion-reorder-button>
           </ion-item>
         </ion-list>
+        <br>
 
+        <!-- Cartões de conteudo -->
+        <div class="card">
+          <div class="item item-divider">
+            titulo
+          </div>
+          <div class="item item-text-wrap">
+            conteudo deu um cartao
+          </div>
+        </div>
+        <div class="list card">
+          <a href="#" class="item item-icon-left">
+            <i class="icon ion-home">Endereço</i>
+          </a>
+          <a href="#" class="item item-icon-left">
+            <i class="icon ion-ios-telephone">Telefone</i>
+          </a>
+        </div>
+
+        <div class="card" ng-repeat="item in noticias">
+          <div class="item item-avatar">
+            <img src="img/{{item.imgUser}}">
+            <h2>{{item.nome}}</h2>
+            <p>{{item.titulo}}</p>            
+          </div>
+          <div class="item item-body">
+              <img src="img/{{item.imgNot}}" class="full-image">
+              <p>{{item.descricao}}</p>
+              <p>
+                <a href="#" class="subdued">Leia mais...</a>
+              </p>
+            </div>
+        </div>
 
 
       </ion-content>
